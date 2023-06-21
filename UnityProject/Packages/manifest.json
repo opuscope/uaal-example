@@ -1,6 +1,23 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.cysharp.unitask",
+        "com.neuecc.unirx"
+      ]
+    },
+    {
+      "name": "registry.npmjs.org",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.opuscope.bridge"
+      ]
+    }
+  ],
   "dependencies": {
-    "com.unity.textmeshpro": "2.0.1",
+    "com.unity.textmeshpro": "3.0.6",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -31,6 +48,9 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.neuecc.unirx": "7.1.0",
+    "com.cysharp.unitask": "2.3.3",
+    "com.opuscope.bridge": "1.0.2"
   }
 }

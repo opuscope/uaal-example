@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,24 @@
 		9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15FC4B2264A1600006315A /* Assets.xcassets */; };
 		9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15FC4D2264A1600006315A /* LaunchScreen.storyboard */; };
 		9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D78DAFC2265A7FC00274039 /* UIKit.framework */; };
+		AB6DCE282A43074B00353135 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB6DCE262A43074B00353135 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABEB54762A430450005A263F /* SwiftBridgeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEB54752A430450005A263F /* SwiftBridgeDemo.swift */; };
+		ABEB547E2A4304F0005A263F /* SwiftAsyncBridge in Frameworks */ = {isa = PBXBuildFile; productRef = ABEB547D2A4304F0005A263F /* SwiftAsyncBridge */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB6DCE292A43074C00353135 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AB6DCE282A43074B00353135 /* UnityFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9D15FC3F2264A1600006315A /* NativeiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +39,11 @@
 		9D15FC4E2264A1600006315A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D15FC502264A1600006315A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D78DAFC2265A7FC00274039 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AB6DCE262A43074B00353135 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEB54742A430450005A263F /* NativeiOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeiOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		ABEB54752A430450005A263F /* SwiftBridgeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBridgeDemo.swift; sourceTree = "<group>"; };
+		ABEB54772A430492005A263F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ABEB54782A4304D0005A263F /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */,
+				ABEB547E2A4304F0005A263F /* SwiftAsyncBridge in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +84,9 @@
 				9D15FC4B2264A1600006315A /* Assets.xcassets */,
 				9D15FC4D2264A1600006315A /* LaunchScreen.storyboard */,
 				9D15FC502264A1600006315A /* Info.plist */,
+				ABEB54752A430450005A263F /* SwiftBridgeDemo.swift */,
+				ABEB54742A430450005A263F /* NativeiOSApp-Bridging-Header.h */,
+				ABEB54772A430492005A263F /* AppDelegate.h */,
 			);
 			path = NativeiOSApp;
 			sourceTree = "<group>";
@@ -68,6 +94,8 @@
 		9D78DAFB2265A7FC00274039 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB6DCE262A43074B00353135 /* UnityFramework.framework */,
+				ABEB54782A4304D0005A263F /* UnityFramework.framework */,
 				9D78DAFC2265A7FC00274039 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -83,12 +111,16 @@
 				9D15FC3B2264A15F0006315A /* Sources */,
 				9D15FC3C2264A15F0006315A /* Frameworks */,
 				9D15FC3D2264A15F0006315A /* Resources */,
+				AB6DCE292A43074C00353135 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NativeiOSApp;
+			packageProductDependencies = (
+				ABEB547D2A4304F0005A263F /* SwiftAsyncBridge */,
+			);
 			productName = NativeiOSApp;
 			productReference = 9D15FC3F2264A1600006315A /* NativeiOSApp.app */;
 			productType = "com.apple.product-type.application";
@@ -104,6 +136,7 @@
 				TargetAttributes = {
 					9D15FC3E2264A15F0006315A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -116,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 9D15FC362264A15F0006315A;
+			packageReferences = (
+				ABEB547C2A4304F0005A263F /* XCRemoteSwiftPackageReference "SwiftAsyncBridge" */,
+			);
 			productRefGroup = 9D15FC402264A1600006315A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D15FC472264A1600006315A /* MainViewController.mm in Sources */,
+				ABEB54762A430450005A263F /* SwiftBridgeDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -285,16 +322,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZE6P334QKR;
+				DEVELOPMENT_TEAM = Z74NVH95C5;
 				INFOPLIST_FILE = NativeiOSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unity.nativeiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeiOSApp/NativeiOSApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -303,16 +344,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZE6P334QKR;
 				INFOPLIST_FILE = NativeiOSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unity.nativeiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeiOSApp/NativeiOSApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -339,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABEB547C2A4304F0005A263F /* XCRemoteSwiftPackageReference "SwiftAsyncBridge" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/opuscope/SwiftAsyncBridge";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABEB547D2A4304F0005A263F /* SwiftAsyncBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEB547C2A4304F0005A263F /* XCRemoteSwiftPackageReference "SwiftAsyncBridge" */;
+			productName = SwiftAsyncBridge;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D15FC372264A15F0006315A /* Project object */;
 }
